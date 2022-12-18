@@ -37,6 +37,8 @@ ALLOWED_HOSTS = ['real-estate0413.herokuapp.com', 'localhost']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
+    'listings.apps.ListingsConfig',
+    'realtors.apps.RealtorsConfig',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
