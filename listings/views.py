@@ -23,3 +23,4 @@ def listing(request, listing_id):
 
 def search(request):
     return render(request, 'listings/search.html')
+
