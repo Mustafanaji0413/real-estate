@@ -4,7 +4,7 @@ from .models import Listing
 
 
 def index(request):
-    listings = Listing.objects.all()
+    listings = Listing.objects.order_by('-list_date')
 
     paginator = Paginator(listings, 6)
     page = request.GET.get('page')
