@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'pages',
+    'django.contrib.humanize'
 
 ]
 
