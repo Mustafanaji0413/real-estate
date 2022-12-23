@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="col-md-7">
+    <div class="card card-body">
+        <a class="btn btn-primary btn-sm btn-block" href="{% url 'create_listing' %}">Create Listing</a>
+        <table class="table table-sm">
+            <tr>
+                <th>Listing</th>
+                <th>Update</th>
+                <th>Remove</th>
+                <th>Date listing</th>
+                <th>Status</th>
+            </tr>
+            {% for listing in listings %}
+            <tr>
+                <td>{{listing.price}}</td>
+                <td>{{listing.bedrooms}</td>
+                <td>{{listing.bathrooms}</td>
+                <td>{{listing.sqft}}</td>
+                <td>{{listing.garage}}</td>
+                <td>{{listing.lot_size}}</td>
+                <td>{{listing.list_date}}</td>
+                <td>{{listing.realtor}}</td>
+                <td>{{listing.description}</td>
+                <td><a class="btn btn-sm btn-info" href="#">Update</a></td>
+                <td><a class="btn btn-sm btn-danger" href="#">Delete</a></td>
+                <td><a class="btn btn-sm btn-success" href="#">Create</a></td>
+
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+</div>
+
+<form action="" method="POST">
+    <input type="submit" name="submit">
+</form>
+
+{% endblock %}
+
