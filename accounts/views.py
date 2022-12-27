@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages, auth
 from django.contrib.auth.models import User
 from contacts.models import Contact
+from .forms import listingForm
 
 
 def register(request):
@@ -74,5 +75,8 @@ def dashboard(request):
 
 
 def createListing(request):
-    context={}
-    return render(request, 'accounts/create_listing.html')
+
+    form = listingForm()
+    context = {'form': form}
+
+    return render(request, 'accounts/create_listing.html', {'form': form})
