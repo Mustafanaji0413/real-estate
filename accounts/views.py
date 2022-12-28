@@ -74,9 +74,16 @@ def dashboard(request):
     return render(request, 'accounts/dashboard.html', context)      
 
 
-def createListing(request):
+# listingForm
 
+def createListing(request):
     form = listingForm()
+    if request.method == 'POST':
+        form = listingForm(request.POST, request.FILES)  
+        if form.is_valid():
+            form.save()
+            return redirect('/listings')
+
     context = {'form': form}
 
     return render(request, 'accounts/create_listing.html', {'form': form})
