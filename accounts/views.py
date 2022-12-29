@@ -88,9 +88,24 @@ def createListing(request):
     return render(request, 'accounts/create_listing.html', {'form': form})
 
 
-def UpdateOrder(request, pk):
-
+def UpdateListing(request, pk):
     listing = Listing.objects.get(id=pk)
     form = listingForm(instance=listing)
+
+    if request.method == 'POST':
+        form = listingForm(request.POST, request.FILES, instance=listing)  
+        if form.is_valid():
+            form.save()
+            return redirect('listings')
+
     context = {'form': form}
     return render(request, 'accounts/create_listing.html', {'form': form})
+
+
+def deleteListing(request, pk):
+    listing = Listing.objects.get(id=pk)
+    if request.method == 'POST':
+        listing.delete()
+        return redirect('listings')
+    context = {'item': listing}
+    return render(request, 'accounts/delete.html', context)
