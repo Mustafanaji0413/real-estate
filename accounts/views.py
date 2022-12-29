@@ -3,6 +3,7 @@ from django.contrib import messages, auth
 from django.contrib.auth.models import User
 from contacts.models import Contact
 from .forms import listingForm
+from listings.models import Listing
 
 
 def register(request):
@@ -88,6 +89,8 @@ def createListing(request):
 
 
 def UpdateOrder(request, pk):
-    form = listingForm()
+
+    listing = Listing.objects.get(id=pk)
+    form = listingForm(instance=listing)
     context = {'form': form}
     return render(request, 'accounts/create_listing.html', {'form': form})
