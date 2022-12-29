@@ -76,6 +76,10 @@
             </div>
             <hr>
             <a href="{% url 'listing' listing.id %}" class="btn btn-primary btn-block">More Info</a>
+              {% if request.user.is_superuser %}
+              <a href="{% url 'admin_update' listing.id %}" class="btn btn-info btn-block">Update</a>
+              <a href="{% url 'listing' listing.id %}" class="btn btn-danger btn-block">Delete</a>
+              {% endif %}
           </div>
         </div>
       </div>

@@ -83,7 +83,11 @@ def createListing(request):
         if form.is_valid():
             form.save()
             return redirect('/listings')
-
     context = {'form': form}
+    return render(request, 'accounts/create_listing.html', {'form': form})
 
+
+def UpdateOrder(request, pk):
+    form = listingForm()
+    context = {'form': form}
     return render(request, 'accounts/create_listing.html', {'form': form})

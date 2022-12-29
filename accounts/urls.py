@@ -6,5 +6,7 @@ urlpatterns = [
     path('register', views.register, name='register'),
     path('logout', views.logout, name='logout'),
     path('dashboard', views.dashboard, name='dashboard'),
-    path('admin', views.createListing, name='admin'),
-]
+    path('admin_create', views.createListing, name='admin_create'),
+    path('admin_update <str:pk>', views.UpdateOrder, name='admin_update'),
+    
+    ]
