@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-from listings.models import Listing 
+from listings.models import Listing
 
 
 class listingForm(ModelForm):
