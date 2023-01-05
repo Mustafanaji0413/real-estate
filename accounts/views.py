@@ -37,7 +37,7 @@ def register(request):
                     messages.success
                     (request, 'You have succesfully registered!')
                     return redirect('login')
-        else:         
+        else:
             messages.error(request, 'Passwords do not match')
             return redirect('register')
     else:
@@ -59,7 +59,7 @@ def login(request):
         else:
             messages.error(request, 'Invalid credentials')
             return redirect('login')
-    else: 
+    else:
         return render(request, 'accounts/login.html')
 
 
@@ -71,8 +71,8 @@ def logout(request):
 
 
 def dashboard(request):
-    user_contacts = Contact.objects.order_by('-contact_date').filter
-    (user_id == request.user.id)
+    user_contacts = Contact.objects.order_by
+    ('-contact_date').filter(user_id=request.user.id)
 
     context = {
         'contacts': user_contacts
@@ -85,7 +85,7 @@ def dashboard(request):
 def createListing(request):
     form = listingForm()
     if request.method == 'POST':
-        form = listingForm(request.POST, request.FILES)  
+        form = listingForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return redirect('/listings')
@@ -98,7 +98,7 @@ def UpdateListing(request, pk):
     form = listingForm(instance=listing)
 
     if request.method == 'POST':
-        form = listingForm(request.POST, request.FILES, instance=listing) 
+        form = listingForm(request.POST, request.FILES, instance=listing)
         if form.is_valid():
             form.save()
             return redirect('listings')
