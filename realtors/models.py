@@ -1,6 +1,8 @@
 from django.db import models
 from datetime import datetime
 
+# Create realtor
+
 
 class Realtor(models.Model):
     name = models.CharField(max_length=200)

@@ -3,6 +3,8 @@ from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from .choices import price_choices, bedroom_choices, state_choices
 from .models import Listing
 
+# How many listings per page
+
 
 def index(request):
     listings = Listing.objects.order_by('-list_date')

@@ -36,7 +36,7 @@ Find the right broker for your housing deal!
 - - Login Page
 - - Dashboard Page
 - - Edit Listing Page
-- - Create Listing Page
+- - Create a Listing Page
 - - Delete Listing 
 - Testing 
 - Deployment 
@@ -64,7 +64,7 @@ To better understand the customer journey I have written an example of what it c
 
 The Andersons have for a long time been looking to buy a new home and sell their current house. But with the large jungle of different real estate companies and promises they all make, it has been difficult to make the decisions of what real estate company the Andersons should partner with. 
 
-While scrolling online the Andersson came across an ad about MN Realestate. By partnering with some of the biggest social media platforms MN Realestate has been able to use its algorithm to target individuals that have shown interest in real estate reels and posts. 
+While scrolling online Andersson came across an ad about MN Realestate. By partnering with some of the biggest social media platforms MN Realestate has been able to use its algorithm to target individuals that have shown interest in real estate reels and posts. 
 
 The Andersson clicked on the ad shown and started to read more about MN Realestate and the approach they are taking to sell their listings and comfort customers. Along with reviews and recommendations, the Andersons decided to browse our website to possibly find a home matching their needs.
 
@@ -168,7 +168,7 @@ To make the application as dynamic as possible, I want the navbar and footer to 
 
  ### Make An Inquiry page
   
-  On the Make An Inquiry page the logged in user can make an Inquiry and get in touch with the correct realtor for the listing to get more info and proceed in the process of buying a home. The Name and email of the user is prefilled when making a Inquiry for a better user experiance. 
+  On the Make An Inquiry page the logged-in user can make an Inquiry and get in touch with the correct realtor for the listing to get more info and proceed in the process of buying a home. The Name and email of the user are prefilled when making an Inquiry for a better user experience. 
 <p align="center">
   <img width="1100" alt="Screenshot 2023-01-05 at 20 24 53" src="https://user-images.githubusercontent.com/115544231/210863516-6a6e4f0d-b5c8-4175-aaf4-5c195fb5cb07.png">
 </p>
@@ -235,12 +235,12 @@ web: gunicorn realestate.wsgi
 
 11. Disable Heroku from collecting static files
 
-heroku config:set Remove the Collect static from config vars. 
+Heroku config:set Remove the Collect static from config vars. 
 
 12. Add the hostname to the project settings.py file
 ALLOWED_HOSTS = ['real-estate0413.herokuapp.com', 'localhost']
 
-13. Connect Heroku to your Github, by selecting Github as the deployment method and searching for the GitHub repository and pressing
+13. Connect Heroku to your Github, by selecting Github as the deployment method and searching for the GitHub repository, and pressing
 
 
 14. In Heroku, within settings, under config vars select
@@ -276,17 +276,17 @@ Deploy Branch
 ## Credits 
 
 #### Code 
-- To help me get started with the project I used a template code that was takem from <a href="https://www.youtube.com/traversymedia">Brad's Youtube</a> The full template I used can be found <a href="https://drive.google.com/drive/folders/1fbQT5j4DYKJic3W0ZHEUZplkHRH1vSzj?usp=sharing">Here.</a>
+- To help me get started with the project I used a template code that was taken from <a href="https://www.youtube.com/traversymedia">Brad's Youtube</a> The full template I used can be found <a href="https://drive.google.com/drive/folders/1fbQT5j4DYKJic3W0ZHEUZplkHRH1vSzj?usp=sharing">Here.</a>
 
-- To help me get an understanding how to add the CRUD functionality I took Inspiration from <a href="https://www.youtube.com/watch?v=eBsc65jTKvw">This</a> Youtube Video. 
+- To help me get an understanding of how to add the CRUD functionality I took Inspiration from <a href="https://www.youtube.com/watch?v=eBsc65jTKvw">This</a> Youtube Video. 
 
 - Scott, Gemma and Ed tutors at <a href="https://codeinstitute.net/se/"> Code Institute</a> helped me solve some  bugs that I run into.
 
 #### Bootstrap
-- Bootstrap has an amazing library and has helped me focus on the backend and save a lot of time with style, and layout on the frontend.
+- Bootstrap has an amazing library and has helped me focus on the backend and save a lot of time with style, and layout on the front end.
 
 #### Django
-- The views from <a href="https://www.djangoproject.com/">Django</a> helped my so much and saved me alot of time with my style and layout on the frontend. 
+- The views from <a href="https://www.djangoproject.com/">Django</a> helped me so much and saved me a lot of time with my style and layout on the frontend. 
 
 ## Issues with code
 - Most of my problems were solved with the help of Tutor Support, W3Schools, Stack Overflow, and my Mentor. 
@@ -295,5 +295,5 @@ Deploy Branch
 
 - Style the Create Listing page
 - Give the user an alert once they make an Inquiry
-- Higlight the page you are on in the Navbar
-- Encourage users to register in more places in the website. 
+- Highlight the page you are on in the Navbar
+- Encourage users to register in more places on the website. 

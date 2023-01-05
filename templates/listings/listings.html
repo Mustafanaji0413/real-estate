@@ -40,12 +40,14 @@
       <div class="col-md-6 col-lg-4 mb-4">
         <div class="card listing-preview">
           <img class="card-img-top" src="{{ listing.photo_main.url }}" alt="">
+          <!-- Listing price -->
           <div class="card-img-overlay">
             <h2>
               <span class="badge badge-secondary text-white">${{ listing.price | intcomma }}</span>
             </h2>
           </div>
           <div class="card-body">
+            <!-- Listing title/city/state/zip -->
             <div class="listing-heading text-center">
               <h4 class="text-primary">{{ listing.title }}</h4>
               <p>
@@ -53,29 +55,36 @@
               </p>
             </div>
             <hr>
+            <!-- Listing Sqft -->
             <div class="row py-2 text-secondary">
               <div class="col-6">
                 <i class="fas fa-th-large"></i> Sqft: {{listing.sqft}}</div>
+                 <!-- Listing garage space -->
               <div class="col-6">
                 <i class="fas fa-car"></i> Garage: {{listing.garage}}</div>
             </div>
             <div class="row py-2 text-secondary">
+               <!-- Listing bedroom space -->
               <div class="col-6">
                 <i class="fas fa-bed"></i> Bedrooms: {{listing.bedrooms}}</div>
+                 <!-- Listing bathroom -->
               <div class="col-6">
                 <i class="fas fa-bath"></i> Bathrooms: {{listing.bathrooms}}</div>
             </div>
             <hr>
+             <!-- Listing realtor -->
             <div class="row py-2 text-secondary">
               <div class="col-12">
                 <i class="fas fa-user"></i> {{listing.realtor}}</div>
             </div>
+             <!-- Listing post date -->
             <div class="row text-secondary pb-2">
               <div class="col-6">
                 <i class="fas fa-clock"></i> {{listing.list_date | timesince}}</div>
             </div>
             <hr>
             <a href="{% url 'listing' listing.id %}" class="btn btn-primary btn-block">More Info</a>
+             <!-- If user is admin, update/delete Listing -->
               {% if request.user.is_superuser %}
               <a href="{% url 'admin_update' listing.id %}" class="btn btn-info btn-block">Update</a>
               <a href="{% url 'admin_delete' listing.id %}" class="btn btn-danger btn-block">Delete</a>
@@ -90,7 +99,7 @@
       </div>
       {% endif %}
     </div>
-
+       <!-- Page Listing/pagination  -->
     <div class="row">
       <div class="col-md-12">
         {% if listings.has_other_pages %}

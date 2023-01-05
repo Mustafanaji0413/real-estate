@@ -62,12 +62,17 @@ def login(request):
     else:
         return render(request, 'accounts/login.html')
 
+# Logout function
+
 
 def logout(request):
     if request.method == 'POST':
         auth.logout(request)
         messages.success(request, 'You have logged out')
         return redirect('index')
+
+
+# Dashboard
 
 
 def dashboard(request):
@@ -79,7 +84,7 @@ def dashboard(request):
     return render(request, 'accounts/dashboard.html', context)
 
 
-# listingForm
+# CRUD, create listing function
 
 def createListing(request):
     form = listingForm()
@@ -90,6 +95,9 @@ def createListing(request):
             return redirect('/listings')
     context = {'form': form}
     return render(request, 'accounts/create_listing.html', {'form': form})
+
+
+# CRUD, update listing function
 
 
 def UpdateListing(request, pk):
@@ -104,6 +112,8 @@ def UpdateListing(request, pk):
 
     context = {'form': form}
     return render(request, 'accounts/create_listing.html', {'form': form})
+
+# CRUD, Delete listing function
 
 
 def deleteListing(request, pk):

@@ -45,6 +45,7 @@
           <img src="{{ listing.photo_main.url }}" alt="" class="img-main img-fluid mb-3">
           <!-- Thumbnails -->
           <div class="row mb-5 thumbs">
+            <!-- Inside home image 1 -->
             {% if listing.photo_1 %}
             <div class="col-md-2">
               <a href="{{ listing.photo_1.url }}" data-lightbox="home-images">
@@ -53,6 +54,7 @@
             </div>
             {% endif %}
             {% if listing.photo_2 %}
+            <!-- Inside home image 2 -->
             <div class="col-md-2">
               <a href="{{ listing.photo_2.url }}" data-lightbox="home-images">
                 <img src="{{ listing.photo_2.url }}" alt="" class="img-fluid">
@@ -60,6 +62,7 @@
             </div>
             {% endif %}
             {% if listing.photo_3 %}
+            <!-- Inside home image 3 -->
             <div class="col-md-2">
               <a href="{{ listing.photo_3.url }}" data-lightbox="home-images">
                 <img src="{{ listing.photo_3.url }}" alt="" class="img-fluid">
@@ -67,6 +70,7 @@
             </div>
             {% endif %}
             {% if listing.photo_4 %}
+            <!-- Inside home image 4 -->
             <div class="col-md-2">
               <a href="{{ listing.photo_4.url }}" data-lightbox="home-images">
                 <img src="{{ listing.photo_4.url }}" alt="" class="img-fluid">
@@ -74,6 +78,7 @@
             </div>
             {% endif %}
             {% if listing.photo_5 %}
+            <!-- Inside home image 5 -->
             <div class="col-md-2">
               <a href="{{ listing.photo_5.url }}" data-lightbox="home-images">
                 <img src="{{ listing.photo_5.url }}" alt="" class="img-fluid">
@@ -81,6 +86,7 @@
             </div>
             {% endif %}
             {% if listing.photo_6 %}
+            <!-- Inside home image 6 -->
             <div class="col-md-2">
               <a href="{{ listing.photo_6.url }}" data-lightbox="home-images">
                 <img src="{{ listing.photo_6.url }}" alt="" class="img-fluid">
@@ -92,18 +98,22 @@
           <div class="row mb-5 fields">
             <div class="col-md-6">
               <ul class="list-group list-group-flush">
+                <!-- Listing price -->
                 <li class="list-group-item text-secondary">
                   <i class="fas fa-money-bill-alt"></i> Asking Price:
                   <span class="float-right">${{ listing.price | intcomma}}</span>
                 </li>
+                <!-- Listing bedrooms -->
                 <li class="list-group-item text-secondary">
                   <i class="fas fa-bed"></i> Bedrooms:
                   <span class="float-right">{{ listing.bedrooms }}</span>
                 </li>
+                <!-- Listing bathrooms -->
                 <li class="list-group-item text-secondary">
                   <i class="fas fa-bath"></i> Bathrooms:
                   <span class="float-right">{{ listing.bathrooms }}</span>
                 </li>
+                <!-- Listing garage -->
                 <li class="list-group-item text-secondary">
                   <i class="fas fa-car"></i> Garage:
                   <span class="float-right">{{ listing.garage }}
@@ -113,19 +123,23 @@
             </div>
             <div class="col-md-6">
               <ul class="list-group list-group-flush">
+                <!-- Listing aquare feet -->
                 <li class="list-group-item text-secondary">
                   <i class="fas fa-th-large"></i> Square Feet:
                   <span class="float-right">{{ listing.sqft }}</span>
                 </li>
+                <!-- Listing lot size -->
                 <li class="list-group-item text-secondary">
                   <i class="fas fa-square"></i> Lot Size:
                   <span class="float-right">{{ listing.lot_size }} Acres
                   </span>
                 </li>
+                <!-- Listing date posted -->
                 <li class="list-group-item text-secondary">
                   <i class="fas fa-calendar"></i> Listing Date:
                   <span class="float-right">{{ listing.list_date }}</span>
                 </li>
+                <!-- Listing realtor -->
                 <li class="list-group-item text-secondary">
                   <i class="fas fa-bed"></i> Realtor:
                   <span class="float-right">{{ listing.realtor }}
@@ -144,6 +158,7 @@
             </div>
           </div>
         </div>
+        <!-- Listing realtor image -->
         <div class="col-md-3">
           <div class="card mb-3">
             <img class="card-img-top" src="{{ listing.realtor.photo.url }}" alt="">
@@ -163,6 +178,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
+          <!-- inquiry button -->
           <h5 class="modal-title" id="inquiryModalLabel">Make An Inquiry</h5>
           <button type="button" class="close" data-dismiss="modal">
             <span>&times;</span>
@@ -170,12 +186,14 @@
         </div>
         <div class="modal-body">
           <form action="{% url 'contact' %}" method="POST">
+            <!-- If the user is admin -->
             {% csrf_token %}
             {% if user.is_authenticated%}
               <input type="hidden" name="user_id" value="{{ user.id }}">
             {% else %}
             <input type="hidden" name="user_id" value="0">
             {% endif %}
+            <!-- if the user is not admin -->
             <input type="hidden" name="realtor_email" value="{{ listing.realtor.email }}">
             <input type="hidden" name="listing_id" value="{{ listing.id }}">
             <div class="form-group">

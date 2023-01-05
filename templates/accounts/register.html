@@ -13,7 +13,7 @@
             <div class="card-body">
                 <!-- Alerts -->
                 {% include '_alerts.html' %}
-                
+                <!-- Register account -->
                 <form action="{% url 'register' %}" method="POST">
                     {% csrf_token %}
                   <div class="form-group">

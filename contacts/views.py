@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import Contact
 
+# Send email to realtor when he/she gets a inquiry
+
 
 def contact(request):
     if request.method == 'POST':
@@ -29,6 +31,8 @@ def contact(request):
                           message=message, user_id=user_id)
 
         contact.save()
+
+        # Display success message
 
         messages.success
         (request, 'Your request has been submitted,'

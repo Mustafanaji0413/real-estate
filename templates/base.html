@@ -67,7 +67,7 @@
             <a class="nav-link" href="{% url 'listings'%}">Featured Listings</a>
           </li>
         </ul>
-
+         <!-- is user is Superuser navbar -->
         <ul class="navbar-nav ml-auto">
           {% if user.is_authenticated %}
             {% if request.user.is_superuser %}
@@ -78,9 +78,11 @@
               class="nav-item mr-3"
             {% endif %}
             >
-            <a class="nav-link" href="{% url 'admin_create' %}">(Create-Listing)</a>
+            <a class="nav-link" href="{% url 'admin_create' %}">Create-Listing</a>
             </li>
             {% endif %}
+             <!-- If is regular user navbar -->
+             
               <li
               {% if 'dashboard' in request.path %}
                 class="nav-item active mr-3"
@@ -88,9 +90,11 @@
                 class="nav-item mr-3"
               {% endif %}
               >
+               <!-- Navbar if logged in -->
               <a class="nav-link" href="{% url 'dashboard' %}">Welcome {{ user.username }}
-              (Dashboard)</a>
+              Dashboard</a>
               </li>
+               <!-- Logout -->
               <li class="nav-item mr-3">
               <a href="javascript:{document.getElementById('logout').submit()}"
               class="nav-link">
@@ -102,6 +106,7 @@
                 </form>
               </li>
           {% else %}
+           <!-- if not signed in navbar -->
             <li
             {% if 'register' in request.path %}
               class="nav-item active mr-3"

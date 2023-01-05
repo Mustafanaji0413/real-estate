@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
 
+<!-- Confirmation when deleting listing -->
+
 <p>Are you sure you want to delete "{{item}}"?</p>
 
 <form action="{% url 'admin_delete' item.id %}" method="POST">
