@@ -293,7 +293,8 @@ Deploy Branch
 
 ## Possible future features
 
-- Style the Create Listing page
-- Give the user an alert once they make an Inquiry
-- Highlight the page you are on in the Navbar
+- Style the Create Listing page.
+- Give the user an alert once they make an Inquiry.
+- Highlight the page you are on in the Navbar.
 - Encourage users to register in more places on the website. 
+- When filtering for a listing, make the items stick on text fields.
