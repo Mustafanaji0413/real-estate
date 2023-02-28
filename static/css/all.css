@@ -3770,6 +3770,16 @@ readers do not read off random characters that represent icons */
   position: absolute;
   width: 1px; }
 
+.create-listing{
+  display: flex;
+  flex-direction: column;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border-radius: 100%;
+}
+
 .sr-only-focusable:active, .sr-only-focusable:focus {
   clip: auto;
   height: auto;

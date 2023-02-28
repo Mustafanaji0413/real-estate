@@ -113,6 +113,7 @@ def UpdateListing(request, pk):
     context = {'form': form}
     return render(request, 'accounts/create_listing.html', {'form': form})
 
+
 # CRUD, Delete listing function
 
 

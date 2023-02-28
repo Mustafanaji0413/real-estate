@@ -298,3 +298,4 @@ Deploy Branch
 - Highlight the page you are on in the Navbar.
 - Encourage users to register in more places on the website. 
 - When filtering for a listing, make the items stick on text fields.
+- When a user make Inquiry send an email to the realtor. 
