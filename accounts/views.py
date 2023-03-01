@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from contacts.models import Contact
 from .forms import listingForm
 from listings.models import Listing
+# from PIL import Image
 
 
 def register(request):
