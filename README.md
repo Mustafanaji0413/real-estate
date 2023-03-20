@@ -176,13 +176,13 @@ To make the application as dynamic as possible, I want the navbar and footer to 
   ### Add a listing. 
   As an admin, you can choose to create a brand new listing. To do this you need to fill out the listing information and other valid details to be able to post it. 
 <p align="center">
-  <img width="1100" alt="Screenshot 2023-01-05 at 20 25 32" src="https://user-images.githubusercontent.com/115544231/210863618-d61601ba-0e84-4c87-903f-e35d23e94554.png">
+  <img width="800" alt="Screenshot 2023-03-20 at 15 47 08" src="https://user-images.githubusercontent.com/115544231/226376211-56bcaf8a-3c45-4ed2-a2f8-83015c146c75.png">
 </p>
 
   ### Edit Listing 
   Admin users can also choose to edit listings if for example, new information has occurred or if the admin has received new images. 
 <p align="center">
-  <img width="1100" alt="Screenshot 2023-01-05 at 23 02 39" src="https://user-images.githubusercontent.com/115544231/210888633-649eefd1-c4e7-4b5f-a823-50db6d358aaa.png">
+  <img width="800" alt="Screenshot 2023-03-20 at 15 47 55" src="https://user-images.githubusercontent.com/115544231/226376447-809608eb-4489-49ef-8375-15e0b825ab7f.png">
 </p>
 
 
@@ -198,7 +198,23 @@ To make the application as dynamic as possible, I want the navbar and footer to 
 ## Testing
 I have manually tested this project by doing the following:
 
+Passed each page thorugh the **W3C Validator** without documenting any active issues:
+<img width="800" alt="Screenshot 2023-03-20 at 15 53 08" src="https://user-images.githubusercontent.com/115544231/226378585-e62dc443-8226-40a9-9556-25b0aaea3790.png">
+<img width="800" alt="Screenshot 2023-03-20 at 15 52 51" src="https://user-images.githubusercontent.com/115544231/226378590-6bf57761-f0d9-4504-9fe4-913686a02544.png">
+<img width="800" alt="Screenshot 2023-03-20 at 15 52 33" src="https://user-images.githubusercontent.com/115544231/226378595-d0e72f78-77b8-4ae3-88c7-8ccc87bd01e4.png">
+<img width="800" alt="Screenshot 2023-03-20 at 15 52 17" src="https://user-images.githubusercontent.com/115544231/226378601-88d02576-3328-4e0a-bb7d-b41fad06a3e4.png">
+<img width="800" alt="Screenshot 2023-03-20 at 15 52 01" src="https://user-images.githubusercontent.com/115544231/226378604-88ce4ae6-a929-4ed7-af7e-6874eebc167b.png">
+<img width="800" alt="Screenshot 2023-03-20 at 15 51 42" src="https://user-images.githubusercontent.com/115544231/226378610-c1f0426b-49f0-43a6-8bd5-4678d2ce99d6.png">
+
 Passed the code through a PEP8 linter and confirmed there are no major issues.
+
+### How I resolved Bugs.
+- Some of the errors i had was that i had set sections without any h2-h6 elements. To solve this issue i changed the section to a div's
+- I also had a double closing label tag error. I had mistankly set an extra close label tag. To resolve this issue i removed one closing label tag. 
+- The "Add listing" page threw me a bunch of unused <tr> and <th> tags. After some reserarch i found out that the errors came from the crispy forms im using to display thr form. To resolve this error i used ((form.as_p)) to creect the crispy form error. 
+- Another issue i ran into was 'The value of the for attribute of the label element must be the ID of a non-hidden form control.' After doing some digging i found out that the id of the input tag needs to be the same as the for value in the label tag. 
+- 
+
 
 ## Deployment
 
