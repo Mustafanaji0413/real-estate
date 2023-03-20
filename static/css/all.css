@@ -3773,8 +3773,8 @@ readers do not read off random characters that represent icons */
 .create-listing{
   display: flex;
   flex-direction: column;
-  margin-left: 30%;
-  margin-right: 30%;
+  margin-left: 40%;
+  margin-right: 50%;
   margin-top: 2%;
   margin-bottom: 2%;
   border-radius: 100%;
