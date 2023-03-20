@@ -6,3 +6,4 @@ class listingForm(ModelForm):
     class Meta:
         model = Listing
         fields = '__all__'
+        
