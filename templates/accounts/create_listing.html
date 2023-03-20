@@ -3,7 +3,7 @@
 
 <!-- Create Listing -->
 
-<form action="{% url 'listings' %}" class="create-listing" method="POST" enctype="multipart/form-data">
+<form class="create-listing" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" name="submit">
